@@ -1,0 +1,25 @@
+{
+  "name": "meitar-takeaway-server",
+  "version": "1.0.0",
+  "description": "Server for meitar takeaway service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NinaLoeterman/meitar-takeaway-server.git"
+  },
+  "keywords": [
+    "takeaway"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NinaLoeterman/meitar-takeaway-server/issues"
+  },
+  "homepage": "https://github.com/NinaLoeterman/meitar-takeaway-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
