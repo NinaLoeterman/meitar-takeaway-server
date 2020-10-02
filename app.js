@@ -16,14 +16,14 @@ app.get("/", function (req, res) {
 app.post("/form", function (req, res) {
   const formData = req.query;
   res.send(formData);
-  main(formData).catch(console.error);
+  sendOrderEmail(formData).catch(console.error);
 });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-async function main(formData) {
+async function sendOrderEmail(formData) {
   var transporter = nodemailer.createTransport({
     service: "outlook",
     port: 25,
@@ -37,7 +37,6 @@ async function main(formData) {
     from: "meitar.takeaway@outlook.com",
     to: "nina.loeterman@gmail.com",
     subject: "An order was placed!",
-    // text: formData.course,
     html: `<div>couple: ${formData.couple}</div>
            <div>first course: ${formData.firstCourse}</div>`,
   };
