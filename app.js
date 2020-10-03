@@ -26,7 +26,7 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-async function sendOrderEmail(formData) {
+const sendOrderEmail = async (formData) => {
   console.log('inside send order', formData)
   var transporter = nodemailer.createTransport({
     service: "outlook",
